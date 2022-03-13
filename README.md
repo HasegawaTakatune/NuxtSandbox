@@ -69,4 +69,5 @@ More information about the usage of this directory in [the documentation](https:
 
 ### 参照
 
-- [アイコン](https://materialdesignicons.com/)
+- [Community-Ied Iconnography](https://materialdesignicons.com/)
+- [【Vue】単一ファイルコンポーネントの命名規則まとめ【ファイル名から記法まで】](https://qiita.com/ngron/items/ab2a17ae483c95a2f15e)
