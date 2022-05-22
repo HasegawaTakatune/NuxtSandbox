@@ -6,27 +6,21 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:prettier": "prettier --check .",
-    "lint": "npm run lint:prettier",
-    "lintfix": "prettier --write --list-different ."
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
-    "nuxt-property-decorator": "^2.9.1",
     "vue": "^2.6.14",
+    "vue-property-decorator": "^9.1.2",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
-    "vuetify": "^2.6.1",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/vuetify": "^1.12.3",
-    "eslint-config-prettier": "^8.3.0",
-    "prettier": "^2.5.1"
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "postcss": "^8.4.4"
   }
 }
