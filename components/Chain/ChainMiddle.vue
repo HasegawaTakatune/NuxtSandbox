@@ -14,16 +14,7 @@ export default ChainFirst.extend({
 
   watch: {
     'chain.inputValue': function () {
-      console.log(`Chain middle name: ${this.chain.inputValue}`);
       Chain.names.set(this.$options.name, this.chain.inputValue);
-    },
-  },
-
-  methods: {
-    InputValueMiddle(e: any) {
-      console.log(`Called ${this.$options.name}`);
-
-      Chain.names.set(this.$options.name, e.target.value);
     },
   },
 

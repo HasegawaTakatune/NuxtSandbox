@@ -11,9 +11,9 @@ export default Vue.extend({
     };
   },
 
-  methods: {
-    InputFirstValue(e: any) {
-      Chain.names.set(this.$options.name, e.target.value);
+  watch: {
+    'chain.inputValue': function () {
+      Chain.names.set(this.$options.name, this.chain.inputValue);
     },
   },
 
@@ -27,12 +27,6 @@ export default Vue.extend({
   <span>
     <label :for="chain.id">{{ chain.label }}</label>
     <span>:</span>
-    <input
-      class="border-solid border-2 border-gray-600 rounded-md"
-      :id="chain.id"
-      type="text"
-      v-model="chain.inputValue"
-      @input="InputFirstValue"
-    />
+    <input class="border-solid border-2 border-gray-600 rounded-md" :id="chain.id" type="text" v-model="chain.inputValue" />
   </span>
 </template>
