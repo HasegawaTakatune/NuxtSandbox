@@ -94,4 +94,8 @@ export type ChainFirst = {
     fullName: string | null;
   }
 
+  export type FullName = {
+    fullName: string;
+  }
+
   
