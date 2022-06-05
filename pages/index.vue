@@ -13,7 +13,7 @@
         class="py-2 px-24 text-sm bg-gray-800 font-semibold rounded-md shadow-lg focus:outline-none border-double border-4 border-blue-500"
         to="/Examples/Relationship"
       >
-        Chain
+        Relationship
       </nuxt-link>
     </div>
   </div>
