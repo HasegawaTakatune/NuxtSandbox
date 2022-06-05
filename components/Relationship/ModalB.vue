@@ -1,10 +1,40 @@
 <template>
-  <t-modal header="Title of the modal" v-model="isShow" @closed="Closed">
-    Content of the modal.
+  <t-modal header="Modal 2" v-model="isShow" @closed="Closed">
+    <div>
+      <label for="page-text">
+        Input Text
+        <input
+          class="pl-2 my-1 border-solid border-2 border-gray-600 rounded-md"
+          id="page-text"
+          v-model="inpTxt"
+          placeholder="text"
+          type="text"
+        />
+      </label>
+    </div>
+
+    <div>
+      <label for="page-number">
+        Input Number
+        <input
+          class="pl-2 my-1 border-solid border-2 border-gray-600 rounded-md"
+          id="number-text"
+          v-model="inpNum"
+          placeholder="number"
+          type="number"
+        />
+      </label>
+    </div>
+
     <template v-slot:footer>
       <div class="flex justify-between">
-        <button type="button">Cancel</button>
-        <button type="button">Ok</button>
+        <button
+          class="bg-blue-500 hover:bg-blue-400 text-white font-bold my-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+          type="button"
+          @click="isShow = false"
+        >
+          Cancel
+        </button>
       </div>
     </template>
   </t-modal>
@@ -14,6 +44,9 @@
 import { Vue, Component, Prop, Emit, Watch } from 'vue-property-decorator';
 import VueTailwind from 'vue-tailwind';
 import { TModal } from 'vue-tailwind/dist/components';
+
+import { SaveLocalStorage, GetLocalStorage } from '~/components/Relationship/Modules/LocalStorageController';
+import { Relationship } from '~/components/Relationship/Modules/Relationship';
 
 @Component({
   name: 'ModalB',
@@ -27,11 +60,42 @@ export default class ModalB extends Vue {
   @Emit() private OnClick(): void {}
   @Emit() public input(value: boolean) {}
 
-  @Watch('value') private showChange(val: boolean, oldVaal: boolean) {
+  @Watch('value') private showChange(val: boolean, oldVal: boolean) {
     this.isShow = val;
   }
 
+  @Watch('inpTxt') private inpTxtChange(val: string, oldVal: string) {
+    this.inpTxt = val;
+    // ローカルストレージへ保存
+    const relation = this.relationship._Name();
+    SaveLocalStorage(`${relation}-InputText`, val ?? '');
+  }
+
+  @Watch('inpNum') private inpNumChange(val: number, oldVal: number) {
+    this.inpNum = val;
+    // ローカルストレージへ保存
+    const relation = this.relationship._Name();
+    SaveLocalStorage(`${relation}-InputNumber`, val);
+  }
+
   private isShow: boolean = false;
+
+  private inpTxt: string = '';
+  private inpNum: number = 0;
+
+  private relationship: Relationship = new Relationship();
+
+  public Init(relationship: string[]) {
+    // 関係性の初期化
+    this.relationship._Init(this.$options.name ?? 'ModalB', relationship);
+
+    // 関係性の取得
+    const relation = this.relationship._Name();
+
+    // ローカルストレージから取得
+    this.inpTxt = GetLocalStorage(`${relation}-InputText`);
+    this.inpNum = GetLocalStorage(`${relation}-InputNumber`);
+  }
 
   private Closed() {
     this.isShow = false;
