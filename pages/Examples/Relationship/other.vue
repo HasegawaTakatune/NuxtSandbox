@@ -15,6 +15,7 @@ import { Vue, Component } from 'vue-property-decorator';
 
 // ローカルストレージ保存の確認用の別ページ
 @Component({
+  layout: 'default',
   name: 'RelationshipOtherPage',
 })
 export default class RelationshipOtherPage extends Vue {}

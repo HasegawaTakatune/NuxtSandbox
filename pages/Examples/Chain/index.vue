@@ -12,6 +12,7 @@ import Vue from 'vue';
 import ChainLast from '~/components/Chain/ChainLast.vue';
 
 export default Vue.extend({
+  layout: 'default',
   components: { ChainLast },
   name: 'ChainPage',
 });

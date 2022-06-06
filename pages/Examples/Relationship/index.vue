@@ -56,6 +56,7 @@ import { SaveLocalStorage, GetLocalStorage } from '~/components/Relationship/Mod
 import ModalA from '~/components/Relationship/ModalA.vue';
 
 @Component({
+  layout: 'default',
   name: 'RelationshipPage',
   components: {
     ModalA,
