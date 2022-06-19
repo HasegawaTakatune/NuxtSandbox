@@ -17,6 +17,25 @@ export default Vue.extend({
       type: Array,
       required: true,
     },
+    inputSelect: {
+      type: String,
+      required: true,
+    },
+  },
+
+  data() {
+    return {
+      options: [
+        'スコティッシュフォールド',
+        'アメリカンショートヘア',
+        'ラグドール',
+        'ブリティッシュショートヘア',
+        'ロシアンブルー',
+        'マンチカン',
+        'ベンガル猫',
+        'シャム猫',
+      ],
+    };
   },
 });
 </script>
@@ -29,5 +48,6 @@ export default Vue.extend({
 
     <input-frame type="text" label="Inpu Text" :value="inputText" />
     <input-frame type="checkbox" label="Inpu Checkbox" :value="inputCheckbox" />
+    <input-frame type="select" label="Input Select" :value="inputSelect" :options="options" />
   </div>
 </template>

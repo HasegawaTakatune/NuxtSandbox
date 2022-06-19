@@ -10,7 +10,7 @@ export default Vue.extend({
 
   computed: {
     ShowInputCheckbox() {
-      return this.inputCheckbox?.map((val) => `<${val.label}: ${val.checked}>`).join(' - ');
+      return this.inputCheckbox?.map((val) => ` ${val.label}: ${val.checked} `).join(' ');
     },
   },
 
@@ -18,6 +18,7 @@ export default Vue.extend({
     return {
       inputText: 'Default text',
       inputCheckbox: [],
+      inputSelected: '',
     };
   },
 
@@ -43,6 +44,7 @@ export default Vue.extend({
       <br />
       Checkbox: {{ ShowInputCheckbox }}
       <br />
+      Select: {{ inputSelected }}
     </div>
   </div>
 </template>
