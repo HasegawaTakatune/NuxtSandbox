@@ -13,12 +13,19 @@ export default Vue.extend({
       type: String,
       required: true,
     },
+
     inputCheckbox: {
       type: Array,
       required: true,
     },
+
     inputSelect: {
       type: String,
+      required: true,
+    },
+
+    inputObject: {
+      type: Object,
       required: true,
     },
   },
@@ -35,6 +42,8 @@ export default Vue.extend({
         'ベンガル猫',
         'シャム猫',
       ],
+
+      reactiveObj: null,
     };
   },
 });
@@ -47,7 +56,16 @@ export default Vue.extend({
     </div>
 
     <input-frame type="text" label="Inpu Text" :value="inputText" />
+    <br />
     <input-frame type="checkbox" label="Inpu Checkbox" :value="inputCheckbox" />
+    <br />
     <input-frame type="select" label="Input Select" :value="inputSelect" :options="options" />
+    <br />
+    <br />
+    <p>Objects</p>
+    <input-frame type="text" label="Inpu Text" :value="inputObject" />
+    <br />
+    <input-frame type="select" label="Input Select" :value="inputObject.select" :options="options" />
+    <br />
   </div>
 </template>

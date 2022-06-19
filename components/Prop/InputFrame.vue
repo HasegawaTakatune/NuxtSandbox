@@ -8,6 +8,7 @@ export default Vue.extend({
       type: String,
       required: false,
     },
+
     value: {
       type: String | Object,
       default: () => {
@@ -15,16 +16,19 @@ export default Vue.extend({
       },
       required: false,
     },
+
     label: {
       type: String,
       default: '',
       required: false,
     },
+
     type: {
       type: String, // text, cxheckbox, select
       default: 'text',
       required: false,
     },
+
     options: {
       type: Array,
       default: () => {
@@ -42,24 +46,18 @@ export default Vue.extend({
 
   watch: {
     value: function (val, _) {
-      console.log('watch value');
       this.originValue = val;
-    },
-  },
-
-  computed: {
-    ShowValue() {
-      if (this.type === 'checkbox') {
-        return this.originValue?.map((val) => `${val.label}: ${val.checked}`).join('<br>');
-      } else if (this.type === 'select') {
-        return this.originValue;
-      }
-      return this.originValue;
     },
   },
 
   created() {
     this.originValue = this.value;
+  },
+
+  methods: {
+    IsObject() {
+      return typeof this.originValue === 'object';
+    },
   },
 });
 </script>
@@ -67,7 +65,14 @@ export default Vue.extend({
 <template>
   <div>
     <label :for="id">{{ label }} </label>
-    <input v-if="type === 'text'" type="text" v-model="originValue" class="border-solid border-2 border-gray-600 rounded-md" />
+
+    <input
+      v-if="type === 'text' && IsObject()"
+      type="text"
+      v-model="originValue.text"
+      class="border-solid border-2 border-gray-600 rounded-md"
+    />
+    <input v-else-if="type === 'text'" type="text" v-model="originValue" class="border-solid border-2 border-gray-600 rounded-md" />
 
     <div v-else-if="type === 'checkbox'">
       <span v-for="(val, index) in originValue" :key="index" class="form-check">
@@ -76,10 +81,36 @@ export default Vue.extend({
       </span>
     </div>
 
-    <dev v-else-if="type === 'select'">
+    <div v-else-if="type === 'select'">
       <div class="flex justify-center">
         <div class="mb-3 xl:w-96">
           <select
+            v-if="IsObject()"
+            v-model="originValue.name"
+            class="
+              form-select
+              appearance-none
+              block
+              w-full
+              px-3
+              py-1.5
+              text-base
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding bg-no-repeat
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0
+              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+            "
+            aria-label="Default select example"
+          >
+            <option v-for="(option, index) in options" :key="index" :selected="index === originValue.id">{{ option }}</option>
+          </select>
+          <select
+            v-else
             v-model="originValue"
             class="
               form-select
@@ -105,16 +136,6 @@ export default Vue.extend({
           </select>
         </div>
       </div>
-    </dev>
-
-    <div>
-      <span v-once>
-        Init value:
-        <span v-html="ShowValue"></span>
-      </span>
-      <br />
-      Now value:
-      <span v-html="ShowValue"></span>
     </div>
   </div>
 </template>
