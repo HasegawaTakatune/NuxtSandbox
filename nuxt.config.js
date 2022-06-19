@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'NuxtClassSample',
+    title: 'NuxtSandbox',
     htmlAttrs: {
       lang: 'en'
     },
@@ -49,7 +49,7 @@ export default {
   },
 
   router: {
-    base: '/NuxtClassSample/'
+    base: '/NuxtSandbox/'
   },
 
   generate: {
