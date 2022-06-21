@@ -3,4 +3,5 @@
     "editor.formatOnSave": true,
     "vetur.format.defaultFormatter.css": "none",
     "vetur.format.defaultFormatter.scss": "none",
+    "typescript.tsdk": "node_modules/typescript/lib",
  }
