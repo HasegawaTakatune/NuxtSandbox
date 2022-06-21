@@ -1,4 +1,3 @@
-<template></template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 
@@ -23,3 +22,5 @@ export default class RelationshipBase extends Vue {
   }
 }
 </script>
+
+<template></template>

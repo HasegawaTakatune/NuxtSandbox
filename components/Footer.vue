@@ -4,11 +4,13 @@ export default Vue.extend({
   name: 'Footer',
 });
 </script>
+
 <template>
   <footer>
     <h5>RerykA</h5>
   </footer>
 </template>
+
 <style scoped>
 footer {
     width: 100%;

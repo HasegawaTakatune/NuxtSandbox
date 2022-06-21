@@ -1,3 +1,22 @@
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  layout: 'default',
+  name: 'Home',
+
+  data() {
+    return {
+      rooting: [
+        { name: 'Chain', to: '/Examples/Chain' },
+        { name: 'Relationship', to: '/Examples/Relationship' },
+        { name: 'Prop', to: '/Examples/Prop' },
+      ],
+    };
+  },
+});
+</script>
+
 <template>
   <div class="m-6 p-4 border-solid border-2 border-gray-600 rounded-md bg-gray-700 text-blue-500">
     <h1 class="mb-4 font-bold text-center">Index</h1>
@@ -23,22 +42,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue';
-
-export default Vue.extend({
-  layout: 'default',
-  name: 'Home',
-
-  data() {
-    return {
-      rooting: [
-        { name: 'Chain', to: '/Examples/Chain' },
-        { name: 'Relationship', to: '/Examples/Relationship' },
-        { name: 'Prop', to: '/Examples/Prop' },
-      ],
-    };
-  },
-});
-</script>

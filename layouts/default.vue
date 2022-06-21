@@ -10,6 +10,7 @@ export default Vue.extend({
   name: 'Default',
 });
 </script>
+
 <template>
   <html lang="ja">
     <head>
@@ -35,6 +36,7 @@ export default Vue.extend({
     </body>
   </html>
 </template>
+
 <style scoped>
 body {
   height: 100vh;

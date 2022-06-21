@@ -1,57 +1,3 @@
-<template>
-  <div>
-    <t-modal header="Modal 1" v-model="isShow" @closed="Closed">
-      <div>
-        <label for="page-text">
-          Input Text
-          <input
-            class="pl-2 my-1 border-solid border-2 border-gray-600 rounded-md"
-            id="page-text"
-            v-model="inpTxt"
-            placeholder="text"
-            type="text"
-          />
-        </label>
-      </div>
-
-      <div>
-        <label for="page-number">
-          Input Number
-          <input
-            class="pl-2 my-1 border-solid border-2 border-gray-600 rounded-md"
-            id="number-text"
-            v-model="inpNum"
-            placeholder="number"
-            type="number"
-          />
-        </label>
-      </div>
-
-      <template v-slot:footer>
-        <div class="flex justify-between">
-          <button
-            class="bg-blue-500 hover:bg-blue-400 text-white font-bold my-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-            type="button"
-            @click="ShowSub"
-          >
-            Show ModalB
-          </button>
-
-          <button
-            class="bg-blue-500 hover:bg-blue-400 text-white font-bold my-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-            type="button"
-            @click="isShow = false"
-          >
-            Cancel
-          </button>
-        </div>
-      </template>
-    </t-modal>
-
-    <modal-b ref="modalB" v-model="isShowSub" />
-  </div>
-</template>
-
 <script lang="ts">
 import { Vue, Component, Prop, Emit, Watch, Ref } from 'vue-property-decorator';
 import VueTailwind from 'vue-tailwind';
@@ -133,3 +79,57 @@ export default class ModalA extends Vue {
   }
 }
 </script>
+
+<template>
+  <div>
+    <t-modal header="Modal 1" v-model="isShow" @closed="Closed">
+      <div>
+        <label for="page-text">
+          Input Text
+          <input
+            class="pl-2 my-1 border-solid border-2 border-gray-600 rounded-md"
+            id="page-text"
+            v-model="inpTxt"
+            placeholder="text"
+            type="text"
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="page-number">
+          Input Number
+          <input
+            class="pl-2 my-1 border-solid border-2 border-gray-600 rounded-md"
+            id="number-text"
+            v-model="inpNum"
+            placeholder="number"
+            type="number"
+          />
+        </label>
+      </div>
+
+      <template v-slot:footer>
+        <div class="flex justify-between">
+          <button
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold my-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+            type="button"
+            @click="ShowSub"
+          >
+            Show ModalB
+          </button>
+
+          <button
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold my-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+            type="button"
+            @click="isShow = false"
+          >
+            Cancel
+          </button>
+        </div>
+      </template>
+    </t-modal>
+
+    <modal-b ref="modalB" v-model="isShowSub" />
+  </div>
+</template>

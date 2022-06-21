@@ -1,3 +1,51 @@
+<script lang="ts">
+import { Vue, Component, Watch, Ref } from 'vue-property-decorator';
+
+import { SaveLocalStorage, GetLocalStorage } from '~/components/Relationship/Modules/LocalStorageController';
+import ModalA from '~/components/Relationship/ModalA.vue';
+
+@Component({
+  layout: 'default',
+  name: 'RelationshipPage',
+  components: {
+    ModalA,
+  },
+})
+export default class RelationshipPage extends Vue {
+  @Watch('inpTxt') private inpTxtChange(val: string, oldVal: string) {
+    this.inpTxt = val;
+    // ローカルストレージへ保存
+    SaveLocalStorage(`${this.componentName}-InputText`, val ?? '');
+  }
+
+  @Watch('inpNum') private inpNumChange(val: number, oldVal: number) {
+    this.inpNum = val;
+    // ローカルストレージへ保存
+    SaveLocalStorage(`${this.componentName}-InputNumber`, val);
+  }
+
+  @Ref() modalA: ModalA | undefined;
+
+  private componentName: string = 'RelationshipIndex';
+
+  private show: boolean = false;
+
+  private inpTxt: string = '';
+  private inpNum: number = 0;
+
+  mounted() {
+    this.componentName = this.$options.name ?? 'RelationshipIndex';
+
+    // モーダルAの初期化
+    this.modalA?.Init([this.componentName]);
+
+    // ローカルストレージから取得
+    this.inpTxt = GetLocalStorage(`${this.componentName}-InputText`);
+    this.inpNum = GetLocalStorage(`${this.componentName}-InputNumber`);
+  }
+}
+</script>
+
 <template>
   <div>
     <modal-a ref="modalA" v-model="show" />
@@ -48,51 +96,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { Vue, Component, Watch, Ref } from 'vue-property-decorator';
-
-import { SaveLocalStorage, GetLocalStorage } from '~/components/Relationship/Modules/LocalStorageController';
-import ModalA from '~/components/Relationship/ModalA.vue';
-
-@Component({
-  layout: 'default',
-  name: 'RelationshipPage',
-  components: {
-    ModalA,
-  },
-})
-export default class RelationshipPage extends Vue {
-  @Watch('inpTxt') private inpTxtChange(val: string, oldVal: string) {
-    this.inpTxt = val;
-    // ローカルストレージへ保存
-    SaveLocalStorage(`${this.componentName}-InputText`, val ?? '');
-  }
-
-  @Watch('inpNum') private inpNumChange(val: number, oldVal: number) {
-    this.inpNum = val;
-    // ローカルストレージへ保存
-    SaveLocalStorage(`${this.componentName}-InputNumber`, val);
-  }
-
-  @Ref() modalA: ModalA | undefined;
-
-  private componentName: string = 'RelationshipIndex';
-
-  private show: boolean = false;
-
-  private inpTxt: string = '';
-  private inpNum: number = 0;
-
-  mounted() {
-    this.componentName = this.$options.name ?? 'RelationshipIndex';
-
-    // モーダルAの初期化
-    this.modalA?.Init([this.componentName]);
-
-    // ローカルストレージから取得
-    this.inpTxt = GetLocalStorage(`${this.componentName}-InputText`);
-    this.inpNum = GetLocalStorage(`${this.componentName}-InputNumber`);
-  }
-}
-</script>

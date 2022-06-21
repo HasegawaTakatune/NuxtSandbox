@@ -4,11 +4,13 @@ export default Vue.extend({
   name: 'Header',
 });
 </script>
+
 <template>
   <header>
     <h1>Nuxt Sandbox</h1>
   </header>
 </template>
+
 <style scoped>
 header {
     width: 100%;

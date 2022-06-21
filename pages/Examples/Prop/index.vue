@@ -1,6 +1,5 @@
 <script>
 import Vue from 'vue';
-
 import Card from '~/components/Prop/Card.vue';
 
 export default Vue.extend({
