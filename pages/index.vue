@@ -11,6 +11,7 @@ export default Vue.extend({
         { name: 'Chain', to: '/Examples/Chain' },
         { name: 'Relationship', to: '/Examples/Relationship' },
         { name: 'Prop', to: '/Examples/Prop' },
+        { name: 'Style', to: '/Examples/Style' },
       ],
     };
   },
@@ -20,7 +21,7 @@ export default Vue.extend({
 <template>
   <div class="m-6 p-4 border-solid border-2 border-gray-600 rounded-md bg-gray-700 text-blue-500">
     <h1 class="mb-4 font-bold text-center">Index</h1>
-    <div class="text-center grid grid-cols-3 gap-2">
+    <div class="text-center grid grid-cols-3 gap-10">
       <div v-for="(value, index) in rooting" :key="index">
         <nuxt-link
           class="
