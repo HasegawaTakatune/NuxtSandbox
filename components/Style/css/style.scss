@@ -1,0 +1,83 @@
+.ProfileCard {
+  // 参考
+  // https://dubdesign.net/download/html-css/carddesign-6/#i-3
+  $parent: '.ProfileCard';
+
+  &__wrapper {
+    width: 380px;
+    margin: 2rem auto;
+
+    background-color: #fff;
+
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 8px;
+
+    &--primary {
+      @extend #{$parent}__wrapper;
+      background-color: #eaf5ff;
+
+      box-shadow: 0 4px 15px #5edef2;
+    }
+  }
+
+  &__card {
+    padding-bottom: 0.5rem;
+
+    color: #212121;
+
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.16);
+    text-decoration: none;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    padding: 1rem 1.5rem 0;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: solid 3px black;
+
+    order: 1;
+
+    &--primary {
+      @extend #{$parent}__title;
+      color: #0f0f70;
+      border-bottom: solid 3px #0f0f70;
+    }
+  }
+
+  &__figure {
+    margin: 0;
+    order: 0;
+
+    &--primary {
+      @extend #{$parent}__figure;
+      background-color: #fff;
+      border: double #4949fa;
+      border-radius: 2.5%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__body {
+    padding: 0 1.5rem;
+  }
+
+  &__main_sentence {
+    font-size: 0.8rem;
+    text-decoration: none;
+
+    &--primary {
+      color: #0f0fbc;
+    }
+  }
+}
