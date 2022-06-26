@@ -19,6 +19,20 @@
 
       box-shadow: 0 4px 15px #5edef2;
     }
+
+    &--warning {
+      @extend #{$parent}__wrapper;
+      background-color: #ffffea;
+
+      box-shadow: 0 4px 15px #f2f05e;
+    }
+
+    &--danger {
+      @extend #{$parent}__wrapper;
+      background-color: #ffeaea;
+
+      box-shadow: 0 4px 15px #f25e5e;
+    }
   }
 
   &__card {
@@ -50,17 +64,41 @@
       color: #0f0f70;
       border-bottom: solid 3px #0f0f70;
     }
+
+    &--warning {
+      @extend #{$parent}__title;
+      color: #69700f;
+      border-bottom: solid 3px #63700f;
+    }
+
+    &--danger {
+      @extend #{$parent}__title;
+      color: #700f0f;
+      border-bottom: solid 3px #700f0f;
+    }
   }
 
   &__figure {
+    background-color: #fff;
+
     margin: 0;
     order: 0;
 
+    border-radius: 2.5%;
+
     &--primary {
       @extend #{$parent}__figure;
-      background-color: #fff;
       border: double #4949fa;
-      border-radius: 2.5%;
+    }
+
+    &--warning {
+      @extend #{$parent}__figure;
+      border: double #dcfa49;
+    }
+
+    &--danger {
+      @extend #{$parent}__figure;
+      border: double #fa4949;
     }
   }
 
@@ -78,6 +116,14 @@
 
     &--primary {
       color: #0f0fbc;
+    }
+
+    &--warning {
+      color: #94bc0f;
+    }
+
+    &--danger {
+      color: #bc0f0f;
     }
   }
 }
