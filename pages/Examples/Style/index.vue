@@ -52,7 +52,7 @@ export default Vue.extend({
 </script>
 
 <template>
-  <div>
+  <div class="Style-sample">
     <div class="flex justify-center">
       <div class="my-3 xl:w-96">
         <select

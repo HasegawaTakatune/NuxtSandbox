@@ -242,9 +242,11 @@ $default: '.VanpCard';
 }
 
 // ---- Other -----------------------------------------------
-a {
-  color: #4cfcff !important;
-  text-decoration: underline !important;
-  float: right;
-  padding-right: 1rem;
+.Style-sample {
+  a {
+    color: #4cfcff !important;
+    text-decoration: underline !important;
+    float: right;
+    padding-right: 1rem;
+  }
 }
