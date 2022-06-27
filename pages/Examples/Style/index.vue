@@ -77,8 +77,6 @@ export default Vue.extend({
     <CardCase1 v-if="pattern === 'pattern1'" :type="type" />
     <CardCase2 v-else :type="type" />
 
-    <!-- <CardCase2 :type="type" /> -->
-
     <div class="w-full text-center">
       <button
         class="bg-blue-500 hover:bg-blue-400 text-white font-bold my-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
@@ -86,6 +84,16 @@ export default Vue.extend({
       >
         Cards
       </button>
+      <div>
+        <a
+          class="text-teal-200 underline-offset-8"
+          href="https://github.com/HasegawaTakatune/NuxtSandbox/blob/main/components/Style/css/style.scss"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Card style
+        </a>
+      </div>
     </div>
     <CardsModal ref="CardsModal">
       <template v-slot:body>

@@ -130,7 +130,7 @@
   }
 }
 
-// ---- Pattern1 -----------------------------------------------
+// ---- Pattern2 -----------------------------------------------
 $default: '.VanpCard';
 
 .VanpCard {
@@ -239,4 +239,12 @@ $default: '.VanpCard';
   #{$default}__main_sentence {
     color: #ff0000;
   }
+}
+
+// ---- Other -----------------------------------------------
+a {
+  color: #4cfcff !important;
+  text-decoration: underline !important;
+  float: right;
+  padding-right: 1rem;
 }
