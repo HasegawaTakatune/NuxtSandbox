@@ -7,6 +7,16 @@ import ModalA from '~/components/Relationship/ModalA.vue';
 @Component({
   layout: 'default',
   name: 'RelationshipPage',
+  head: () => {
+    return {
+      title: 'Relationship',
+      meta: [
+        { hid: 'description', name: 'description', content: '階層上でのローカルストレージ保存名の設定サンプル' },
+        { hid: 'og:title', name: 'og:title', content: 'Relationship' },
+        { hid: 'og:description', name: 'og:description', content: '階層上でのローカルストレージ保存名の設定サンプル' },
+      ],
+    };
+  },
   components: {
     ModalA,
   },

@@ -3,9 +3,21 @@ import Vue from 'vue';
 import Card from '~/components/Prop/Card.vue';
 
 export default Vue.extend({
-  layout: 'default',
   components: { Card },
+
+  layout: 'default',
   name: 'Prop',
+
+  head() {
+    return {
+      title: this.$options.name,
+      meta: [
+        { hid: 'description', name: 'description', content: '型別の値渡しのサンプル' },
+        { hid: 'og:title', name: 'og:title', content: this.$options.name },
+        { hid: 'og:description', name: 'og:description', content: '型別の値渡しのサンプル' },
+      ],
+    };
+  },
 
   computed: {
     ShowInputCheckbox() {
@@ -57,4 +69,3 @@ export default Vue.extend({
     </div>
   </div>
 </template>
-

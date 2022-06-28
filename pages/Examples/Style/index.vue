@@ -15,6 +15,17 @@ export default Vue.extend({
   layout: 'default',
   name: 'Style',
 
+  head() {
+    return {
+      title: this.$options.name,
+      meta: [
+        { hid: 'description', name: 'description', content: 'SCSSスタイルの作り分けサンプル' },
+        { hid: 'og:title', name: 'og:title', content: this.$options.name },
+        { hid: 'og:description', name: 'og:description', content: 'SCSSスタイルの作り分けサンプル' },
+      ],
+    };
+  },
+
   data() {
     return {
       defaultOptions: ['primary', 'warning', 'danger'],
