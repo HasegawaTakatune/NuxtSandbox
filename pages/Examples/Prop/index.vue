@@ -47,7 +47,7 @@ export default Vue.extend({
 </script>
 
 <template>
-  <div>
+  <div class="pb-8">
     <div class="m-6 p-4 border-solid border-2 border-gray-600 rounded-md">
       <h2 class="font-bold text-purple-900">Prop</h2>
 
@@ -55,17 +55,12 @@ export default Vue.extend({
     </div>
 
     <div class="ml-8">
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Parent values</h5>
-      Text: {{ inputText }}
-      <br />
-      Checkbox: {{ ShowInputCheckbox }}
-      <br />
-      Select: {{ inputSelected }}
-      <br />
-      <br />
-      Object Text: {{ inputObject.text }}
-      <br />
-      Object Select: {{ inputObject.select }}
+      <h2>Parent values</h2>
+      <p>Text: {{ inputText }}</p>
+      <p>Checkbox: {{ ShowInputCheckbox }}</p>
+      <p>Select: {{ inputSelected }}</p>
+      <p>Object Text: {{ inputObject.text }}</p>
+      <p>Object Select: {{ inputObject.select }}</p>
     </div>
   </div>
 </template>

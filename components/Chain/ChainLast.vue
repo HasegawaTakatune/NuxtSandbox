@@ -45,6 +45,6 @@ export default ChainMiddle.extend({
     >
       Set
     </button>
-    Name: {{ fullName }}
+    <span>Name: {{ fullName }}</span>
   </div>
 </template>
