@@ -13,23 +13,22 @@ export default Vue.extend({
 
 <style scoped>
 header {
-    width: 100%;
-    height: 6vh;
-    background-color: rgb(53, 52, 52);
+  width: 100%;
+  height: 50px;
+  background-color: rgb(53, 52, 52);
 
-    text-align: center;
+  text-align: center;
 
-    position:fixed;
-    top: 0;
-    left: 0;
-
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-header h1{
- color: rgb(227, 227, 221);
- font-size: x-large;
- font-weight: 600;
+header h1 {
+  color: rgb(227, 227, 221);
+  font-size: x-large;
+  font-weight: 600;
 
- padding-top: 10px;
+  padding-top: 10px;
 }
 </style>

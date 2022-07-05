@@ -22,7 +22,10 @@ export default {
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/reryka_logo_plane.png' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: 'https://hasegawatakatune.github.io/NuxtSandbox/reryka_logo_plane.png' },
+      { rel: 'stylesheet', href: 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

@@ -13,20 +13,20 @@ export default Vue.extend({
 
 <style scoped>
 footer {
-    width: 100%;
-    height: 4vh;
-    background-color: rgb(72, 63, 63);
-    padding: 5px 50px 0 50px;
+  width: 100%;
+  height: 35px;
+  background-color: rgb(72, 63, 63);
+  padding: 5px 50px 0 50px;
 
-    text-align: end;
+  text-align: end;
 
-    position: fixed;
-    bottom: 0;
-    left: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
-footer h5{
-    color: rgb(227, 227, 221);
-    font-weight: 400;
+footer h5 {
+  color: rgb(227, 227, 221);
+  font-weight: 400;
 }
 </style>
