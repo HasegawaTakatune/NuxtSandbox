@@ -12,6 +12,7 @@ export default Vue.extend({
         { name: 'Relationship', to: '/Examples/Relationship' },
         { name: 'Prop', to: '/Examples/Prop' },
         { name: 'Style', to: '/Examples/Style' },
+        { name: 'Component', to: '/Examples/Component' },
       ],
     };
   },
@@ -24,17 +25,7 @@ export default Vue.extend({
     <div class="text-center grid grid-cols-3 gap-10">
       <div v-for="(value, index) in rooting" :key="index">
         <nuxt-link
-          class="
-            py-2
-            px-24
-            text-sm
-            bg-gray-800
-            font-semibold
-            rounded-md
-            shadow-lg
-            focus:outline-none
-            border-double border-4 border-blue-500
-          "
+          class="py-2 px-24 text-sm bg-gray-800 font-semibold rounded-md shadow-lg focus:outline-none border-double border-4 border-blue-500"
           :to="value.to"
         >
           {{ value.name }}
