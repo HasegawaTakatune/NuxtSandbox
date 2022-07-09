@@ -23,6 +23,6 @@ export default Vue.extend({
 
 <style scoped>
 main {
-  padding-top: 5vh;
+  padding-top: 4rem;
 }
 </style>
