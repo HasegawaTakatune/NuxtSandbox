@@ -10,9 +10,8 @@
 2. [Chain](http://localhost:3000/NuxtSandbox/Examples/Chain) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Chain)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Chain)）  
 3. [Relationship](http://localhost:3000/NuxtSandbox/Examples/Relationship) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Relationship)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Relationship)）  
 4. [Prop1](http://localhost:3000/NuxtSandbox/Examples/Prop) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Prop)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Prop)）  
-5. [Prop2](http://localhost:3000/NuxtSandbox/Examples/Prop) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Prop)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Prop)）  
-6. [Style](http://localhost:3000/NuxtSandbox/Examples/Style) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Style)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Style)）  
-7. [Component](http://localhost:3000/NuxtSandbox/Examples/Component) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Component)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Input)）  
+5. [Style](http://localhost:3000/NuxtSandbox/Examples/Style) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Style)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Style)）  
+6. [Component](http://localhost:3000/NuxtSandbox/Examples/Component) （[ソース](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/pages/Examples/Component)） （[ソース2](https://github.com/HasegawaTakatune/NuxtSandbox/tree/main/components/Input)）  
   
 ### 環境  
 - Nuxt 2.13..3
