@@ -7,7 +7,7 @@ export default Vue.extend({
 
 <template>
   <header>
-    <h1>Nuxt Sandbox</h1>
+    <nuxt-link to="/"><h1>Nuxt Sandbox</h1></nuxt-link>
   </header>
 </template>
 
