@@ -13,6 +13,7 @@ export default Vue.extend({
         { name: 'Prop', to: '/Examples/Prop' },
         { name: 'Style', to: '/Examples/Style' },
         { name: 'Component', to: '/Examples/Component' },
+        { name: 'InputField', to: '/Examples/InputField' },
         { name: 'Game', to: '/Game' },
       ],
     };
