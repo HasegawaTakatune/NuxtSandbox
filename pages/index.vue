@@ -14,6 +14,7 @@ export default Vue.extend({
         { name: 'Style', to: '/Examples/Style' },
         { name: 'Component', to: '/Examples/Component' },
         { name: 'InputField', to: '/Examples/InputField' },
+        { name: 'Task', to: '/Examples/Task' },
         { name: 'Game', to: '/Game' },
       ],
     };
